@@ -10,9 +10,10 @@ import React, { Component } from 'react'
 //     }
 // }
 const Greet = (props) => {
-return (<div>
-        Hello -{props.name}!
-        {props.children}
+return (
+        <div>
+                <h1>Hello -{props.name}!</h1>
+                {props.children}
         </div>)
 }
 export default Greet
