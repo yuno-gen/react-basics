@@ -5,6 +5,7 @@ import Message from './component/Message';
 import Count from './component/Count';
 import Namelist from './component/Namelist';
 import PostList from './component/PostList';
+import LifeCycleA from './component/LifeCycleA';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         {/* <Message /> */}
         {/* <Count /> */}
         {/* <Namelist /> */}
-        <PostList />
+        {/* <PostList /> */}
+        <LifeCycleA />
       </header>
     </div>
   );
