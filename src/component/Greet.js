@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 // export default class Greet extends Component {
 //     render() {

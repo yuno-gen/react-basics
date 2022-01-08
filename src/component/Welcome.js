@@ -1,11 +1,28 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Button } from '@mui/material';
 
 export default class Welcome extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoggedIn: false
+        }
+    }    
+
     render() {
+        if (this.state.isLoggedIn) {
+            return <div>Welcome {this.props.name}</div>
+        }
+
         return (
-            <h1>
-                Welcome, {this.props.name} aka {this.props.heroName}!
-            </h1>
+            <div>
+                <Button 
+                    variant='contained' 
+                    onClick={() => {this.setState({isLoggedIn: true})}}>
+                    Login
+                </Button>
+                <div>Please Login</div>
+            </div>
         )
     }
 }
