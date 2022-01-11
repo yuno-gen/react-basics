@@ -6,6 +6,7 @@ import Count from './component/Count';
 import Namelist from './component/Namelist';
 import PostList from './component/PostList';
 import LifeCycleA from './component/LifeCycleA';
+import Form from './component/Form';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         {/* <Count /> */}
         {/* <Namelist /> */}
         {/* <PostList /> */}
-        <LifeCycleA />
+        {/* <LifeCycleA /> */}
+        <Form />
       </header>
     </div>
   );
