@@ -6,6 +6,11 @@ import Count from './component/Count';
 import Namelist from './component/Namelist';
 import PostList from './component/PostList';
 import LifeCycleA from './component/LifeCycleA';
+import Form from './component/Form';
+import Contact from './component/Contact'
+import Shop from './component/Shop';
+import About from './component/About';
+
 
 function App() {
   return (
@@ -17,7 +22,11 @@ function App() {
         {/* <Count /> */}
         {/* <Namelist /> */}
         {/* <PostList /> */}
-        <LifeCycleA />
+        {/* <LifeCycleA />
+        <Form/> */}
+        <Contact primary={true}/>
+        <Shop/>
+        <About/>
       </header>
     </div>
   );
