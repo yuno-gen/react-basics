@@ -8,6 +8,10 @@ import PostList from './component/PostList';
 import LifeCycleA from './component/LifeCycleA';
 import Form from './component/Form';
 import Contact from './component/Contact';
+import FragmentDemo from './component/FragmentDemo';
+import ParentComp from './component/ParentComp';
+import ErrorBoundary from './component/ErrorBoundary';
+import Hero from './component/Hero';
 
 function App() {
   return (
@@ -21,7 +25,20 @@ function App() {
         {/* <PostList /> */}
         {/* <LifeCycleA /> */}
         {/* <Form /> */}
-        <Contact primary={false} />
+        {/* <Contact primary={false} /> */}
+        {/* <FragmentDemo /> */}
+        {/* <ParentComp /> */}
+        <ErrorBoundary>
+          <Hero heroName='Batman' />
+        </ErrorBoundary>
+
+        <ErrorBoundary>
+          <Hero heroName='Superman' />
+        </ErrorBoundary>
+
+        <ErrorBoundary>
+          <Hero heroName='Joker' />
+        </ErrorBoundary>        
       </header>
     </div>
   );
