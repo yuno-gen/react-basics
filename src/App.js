@@ -12,6 +12,9 @@ import FragmentDemo from './component/FragmentDemo';
 import ParentComp from './component/ParentComp';
 import ErrorBoundary from './component/ErrorBoundary';
 import Hero from './component/Hero';
+import PortalRoot from './component/PortalRoot';
+import { UserProvider } from './UserContext';
+import ComponentC from './component/ComponentC';
 
 function App() {
   return (
@@ -28,7 +31,7 @@ function App() {
         {/* <Contact primary={false} /> */}
         {/* <FragmentDemo /> */}
         {/* <ParentComp /> */}
-        <ErrorBoundary>
+        {/* <ErrorBoundary>
           <Hero heroName='Batman' />
         </ErrorBoundary>
 
@@ -38,7 +41,12 @@ function App() {
 
         <ErrorBoundary>
           <Hero heroName='Joker' />
-        </ErrorBoundary>        
+        </ErrorBoundary>         */}
+        {/* <PortalRoot /> */}
+
+        <UserProvider value='Ayush'>
+          <ComponentC />
+        </UserProvider>
       </header>
     </div>
   );
