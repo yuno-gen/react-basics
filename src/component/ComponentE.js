@@ -5,8 +5,8 @@ export class ComponentE extends Component {
     render() {
         return (
             <UserConsumer>
-                {userName => {
-                    return <div>Hello from component E - {userName}</div>
+                {user => {
+                    return <div>Hello from component E - {user.firstName} {user.lastName}</div>
                 }}
             </UserConsumer>
         )

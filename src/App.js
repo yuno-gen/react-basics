@@ -15,6 +15,9 @@ import Hero from './component/Hero';
 import PortalRoot from './component/PortalRoot';
 import { UserProvider } from './UserContext';
 import ComponentC from './component/ComponentC';
+import HookCounter from './component/HookCounter';
+import HookCounter2 from './component/HookCounter2';
+import HookCounter3 from './component/HookCounter3';
 
 function App() {
   return (
@@ -44,9 +47,13 @@ function App() {
         </ErrorBoundary>         */}
         {/* <PortalRoot /> */}
 
-        <UserProvider value='Ayush'>
+        {/* <UserProvider value={{firstName: 'Ayush', lastName: 'Solanki'}}>
           <ComponentC />
-        </UserProvider>
+        </UserProvider> */}
+
+        {/* <HookCounter /> */}
+        {/* <HookCounter2 /> */}
+        <HookCounter3 />
       </header>
     </div>
   );
