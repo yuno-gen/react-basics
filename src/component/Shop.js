@@ -1,5 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-export default function Shop() {
-  return <div>Shop Page</div>;
+const heading = {
+    fontSize: '72px',
+    color: 'blue'
+}
+
+export default function Shop(props) {
+    return (
+        <div>
+            <div style={heading}>
+                Shop Page
+            </div>
+        </div>
+    )
 }
