@@ -18,7 +18,11 @@ import ComponentC from './component/ComponentC';
 import HookCounter from './component/HookCounter';
 import HookCounter2 from './component/HookCounter2';
 import HookCounter3 from './component/HookCounter3';
+import HookCounter4 from './component/HookCounter4';
 
+import {Route, Link, Routes, BrowserRouter as Router} from 'react-router-dom'
+import Shop from './component/Shop'
+import About from './component/About'
 function App() {
   return (
     <div className="App">
@@ -53,7 +57,28 @@ function App() {
 
         {/* <HookCounter /> */}
         {/* <HookCounter2 /> */}
-        <HookCounter3 />
+        {/* <HookCounter3 /> */}
+        {/* <HookCounter4/> */}
+
+        <Router>
+            <div className='App'>
+              <nav>
+                <ul className='topnav'>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/about">About Us</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
+                  <li><Link to="/shop">Shop</Link></li>
+                </ul>
+              </nav>
+              <Routes>
+                <Route exact path="/" element={<About/>}/>
+                <Route exact path="/about" element={<About/>}/>
+                <Route exact path="/contact" element={<Contact/>}/>
+                <Route exact path="/shop" element={<Shop/>}/>
+              </Routes>
+            </div>
+        </Router>
+        
       </header>
     </div>
   );
