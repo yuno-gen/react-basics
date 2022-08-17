@@ -1,20 +1,30 @@
 import React, { useState } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
-import { buyCake } from "../redux/cake/cakeActions";
+import { buyCake, bakeCake } from "../redux/cake/cakeActions";
 
 function CakeContainer(props) {
   const [numberOfCakes, setNumberOfCakes] = useState(1);
+  const [bakingQuant, setBakingQuant] = useState(1);
   // const numOfCakes = useSelector(state => state.cake.numOfCakes);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleChange = (event) => {
     setNumberOfCakes(event.target.value);
     // console.log("state: ", props);
   };
+ 
+  const handleBake = (event) => {
+    setBakingQuant(event.target.value);
+    // console.log("state: ", props);
+  };
 
   const handleClick = () => {
-    props.buyCake(numberOfCakes);
+    buyCake(numberOfCakes);
   };
+
+  const bakeCall=()=>{
+    console.log("bakeCall", props);
+  }
 
   return (
     <div>
@@ -23,7 +33,10 @@ function CakeContainer(props) {
       <h2>Number of cakes: {props.numOfCakes}</h2>
       <input type="number" value={numberOfCakes} onChange={handleChange} />
       {/* <button onClick={dispatch(handleClick)}>Buy</button> */}
-      <button onClick={()=>props.buyCake(numberOfCakes)}>Buy {numberOfCakes} cakes </button>
+      <button onClick={()=>props.buyCake(numberOfCakes)}>Buy {numberOfCakes} cakes </button><br></br>
+      <input type="number" value={bakingQuant} onChange={handleBake} />
+      {/* <button onClick={dispatch(handleClick)}>Buy</button> */}
+      <button onClick={()=> props.bakeCake(bakingQuant)}>Bake {bakingQuant} cakes </button>
     </div>
   );
 }
@@ -39,6 +52,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     buyCake: (numOfCakes) => dispatch(buyCake(numOfCakes)),
+    bakeCake: (numOfCakes) => dispatch(bakeCake(numOfCakes)),
   };
 }
 
